@@ -1,10 +1,10 @@
 import { Container } from "./styles";
+import { Header } from "../../components/Header";
 
 export function MoviePreview() {
   return(
     <Container>
-      <h1>Hello</h1>
-      <p>hello world</p>
+      <Header />
     </Container>
   )
 }
