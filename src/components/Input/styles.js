@@ -16,10 +16,10 @@ export const Container = styled.div`
   border-radius: 1rem;  
 
   > input {
-    height: 56px;
+    height: 5.6rem;
     width: 100%;
 
-    padding: 12px;
+    padding: 0 2.4rem;
 
     color: ${({ theme }) => theme.COLORS.WHITE};
     background: transparent;

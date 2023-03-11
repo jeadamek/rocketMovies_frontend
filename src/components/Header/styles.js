@@ -4,17 +4,21 @@ export const Container = styled.header`
   grid-area: header;
 
   height: 11.6rem;
-  width: 100%;
+  max-width: 100%;
 
   border-bottom: 1px;
   border-bottom-style: solid;
   border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_500};
 
-  display: flex;
-  justify-content: space-between;
-  gap: 6.4rem;
+  > div {
+    width: 113rem;
+    height: 100%;
+    margin: 0 auto;
 
-  padding: 0 12.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 6.4rem;
+  }
 `;
 
 export const Brand = styled.div`
@@ -31,7 +35,7 @@ export const Brand = styled.div`
 export const Profile = styled.div`
   display: flex;
   align-items: center;
-  min-width: 20rem;
+  min-width: fit-content;
 
   > img {
     height: 7rem;
