@@ -3,8 +3,8 @@ import { Container } from './style';
 
 export function Ratings({ rating, ...rest }) {
   return(
-    <Container>
-      {rating >= 1 ? <AiFillStar /> :<AiOutlineStar /> }
+    <Container {...rest}>
+      {rating >= 1 ? <AiFillStar /> :<AiOutlineStar />}
       {rating >= 2 ? <AiFillStar /> :<AiOutlineStar />}
       {rating >= 3 ? <AiFillStar /> :<AiOutlineStar />}
       {rating >= 4 ? <AiFillStar /> :<AiOutlineStar />}

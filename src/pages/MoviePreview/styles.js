@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 
   display: grid;
   grid-template-rows: 12rem auto;
@@ -12,23 +13,28 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
-    padding: 3rem 2rem 6rem;
-    overflow-y: auto;
-    max-width: 117rem;
+    padding: 3rem 0 6rem;
+
+    max-width: 113rem;
     margin: 0 auto;
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 `;
 
 export const Content = styled.div`
   width: 100%;
+  height: 47rem;
+  overflow-y: auto;
 
   display: flex;
   flex-direction: column;
 
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-  }
+  margin-top: 2.4rem;
+  padding-right: 1rem;
 
   .tags {
     margin: 4rem 0;
@@ -38,7 +44,6 @@ export const Content = styled.div`
 `;
 
 export const MovieInfo = styled.div`
-  margin-top: 2.4rem;
   display: flex;
   flex-direction: column;
 `;
