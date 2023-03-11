@@ -11,7 +11,6 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
   color: ${({ theme }) => theme.COLORS.GRAY_300};
 
-
   margin-bottom: .8rem;
   border-radius: 1rem;  
 
@@ -25,11 +24,9 @@ export const Container = styled.div`
     background: transparent;
     border: 0;
 
-
     &:placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
-
 
     > svg {
       margin-left: 16px;
