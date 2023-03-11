@@ -11,4 +11,5 @@ export const Container = styled.div`
 
   font-family: 'Roboto', serif;
   font-size: 1.2rem;
+  line-height: 1.4rem;
 `;  

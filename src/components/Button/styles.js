@@ -8,10 +8,15 @@ export const Container = styled.button`
   color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
   border: 0;
-  padding: 1.6rem 0;
+  padding: 1.6rem 3.2rem;
   margin-top: 2.4rem;
   border-radius: 1rem;
   font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: .8rem;
 
   &:disabled {
     opacity: 0.5;
