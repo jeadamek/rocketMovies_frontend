@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
 
   display: grid;
   grid-template-rows: 11.5rem auto;
@@ -12,9 +13,11 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
-    padding: 5rem 2rem 6rem;
-    width: 117rem;
+    padding: 5rem 2rem 6rem; // <<<<<<<<< ver isso
+    width: 117rem; // <<<<<<<<< ver isso
     margin: 0 auto;
+
+    overflow: hidden;
   }
 `;
 
@@ -39,5 +42,14 @@ export const Menu = styled.div`
 
 export const Content = styled.div`
   width: 100%;
+  height: 40rem;
+  padding-right: 1rem;
+  margin-bottom: 5.8rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
   overflow-y: auto;
+  
 `;

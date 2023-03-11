@@ -29,13 +29,13 @@ export const Title = styled.div`
     line-height: 3.2rem;
   }
 
-  svg {
-    height: 1.5rem;
-    width: 1.5rem;
-  }
-
   .cardRating {
     gap: .5rem
+  }
+
+  .cardRating > svg {
+    height: 1.8rem;
+    width: 1.8rem;
   }
 `;
 
