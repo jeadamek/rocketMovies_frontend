@@ -14,12 +14,12 @@ export function MoviePreview() {
       <Header />
 
       <main>
-        <Content>
           <div className="buttons">
             <ButtonText title='voltar' icon={FiArrowLeft}/>
             <ButtonText title='Apagar Filme' />
           </div>
-
+          
+        <Content>
           <MovieInfo>
             <TitleRating>
               <h1>Interestelar</h1>
