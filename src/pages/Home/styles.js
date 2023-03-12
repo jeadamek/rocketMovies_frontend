@@ -13,8 +13,8 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
-    padding: 5rem 2rem 6rem; // <<<<<<<<< ver isso
-    width: 117rem; // <<<<<<<<< ver isso
+    padding: 5rem 2rem 6rem; 
+    width: 117rem; 
     margin: 0 auto;
 
     overflow: hidden;

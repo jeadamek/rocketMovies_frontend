@@ -1,9 +1,10 @@
-import { Container, Form } from './styles';
+import { Container, Form, Section } from './styles';
 
 import { Input } from '../../components/Input';
 import { Header } from '../../components/Header';
-import { Textarea } from '../../components/Textarea';
 import { Button } from '../../components/Button';
+import { Textarea } from '../../components/Textarea';
+import { MovieItem } from '../../components/MovieItem';
 import { ButtonText } from '../../components/ButtonText';
 
 import { FiArrowLeft } from "react-icons/fi";
@@ -31,7 +32,14 @@ export function New() {
 
           <Textarea placeholder="Observações" />
 
-          <div>Tags</div>
+          <Section>
+            <h2>Marcadores</h2>
+            <div className="tags">
+              <MovieItem value="react"/>
+              <MovieItem isNew placeholder="Novo Marcador"/>
+            </div>
+          </Section>
+
           <div>
             <Button 
               title="Excluir filme" 
