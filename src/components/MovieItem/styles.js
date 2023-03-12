@@ -17,6 +17,7 @@ export const Container = styled.div`
     border: none;
     background: none;
     color: ${({ theme }) => theme.COLORS.PINK};
+    font-size: 2.2rem;
   }
   
   > input {
