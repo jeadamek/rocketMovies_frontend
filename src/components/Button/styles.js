@@ -15,7 +15,7 @@ export const Container = styled.button`
 
   display: flex;
   align-items: center;
-  align-content: center;
+  justify-content: center;
   gap: .8rem;
 
   &:disabled {

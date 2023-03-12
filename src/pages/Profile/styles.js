@@ -12,5 +12,9 @@ export const Container = styled.div`
 
     padding: 0 14.4rem;
   }
+`;
 
+export const Form = styled.form`
+  width: 34.4rem;
+  margin: 3rem auto 0;
 `;
