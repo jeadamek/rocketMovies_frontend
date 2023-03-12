@@ -39,6 +39,16 @@ export default createGlobalStyle`
     filter: brightness(0.9);
   }
 
+  button.primary {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  }
+    
+  button.secondary {
+    background-color: ${({ theme }) => theme.COLORS.BLACK};
+    color: ${({ theme }) => theme.COLORS.PINK};
+  }
+
   /* SCROLLBAR STYLE */
   /* Firefox */
   * {

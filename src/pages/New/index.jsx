@@ -1,6 +1,8 @@
 import { Container, Form } from './styles';
 
+import { Input } from '../../components/Input';
 import { Header } from '../../components/Header';
+import { Button } from '../../components/Button';
 import { ButtonText } from '../../components/ButtonText';
 
 import { FiArrowLeft } from "react-icons/fi";
@@ -20,6 +22,20 @@ export function New() {
             <h1>Novo filme</h1>
           </header>
 
+
+            <div>
+              <Input placeholder="Título" />
+              <Input placeholder="Sua nota (de 0 a 5)" />
+            </div>
+
+          {/* <Textarea placeholder="Observações" /> */}
+
+          <div>Textarea</div>
+          <div>Tags</div>
+          <div>
+            <Button title="Excluir filme" className="secondary"/>
+            <Button title="Salvar alterações"/>
+          </div>
         </Form>
       </main>
 
