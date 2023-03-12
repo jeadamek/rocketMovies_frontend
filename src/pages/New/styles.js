@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+
 
   display: grid;
   grid-template-rows: 116px auto;
@@ -29,15 +31,13 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 4rem;
 
-  > header {
-    display: flex;
-    flex-direction: column;
-    gap: 2.4rem;
-
+  > header {  
     > h1 {
       font-weight: 500;
       font-size: 3.6rem;
       line-height: 4.7rem;
+
+      margin-top: 2.4rem;
     }
   }
 
