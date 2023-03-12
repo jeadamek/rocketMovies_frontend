@@ -2,6 +2,7 @@ import { Container, Form } from './styles';
 
 import { Input } from '../../components/Input';
 import { Header } from '../../components/Header';
+import { Textarea } from '../../components/Textarea';
 import { Button } from '../../components/Button';
 import { ButtonText } from '../../components/ButtonText';
 
@@ -28,13 +29,18 @@ export function New() {
               <Input placeholder="Sua nota (de 0 a 5)" />
             </div>
 
-          {/* <Textarea placeholder="Observações" /> */}
+          <Textarea placeholder="Observações" />
 
-          <div>Textarea</div>
           <div>Tags</div>
           <div>
-            <Button title="Excluir filme" className="secondary"/>
-            <Button title="Salvar alterações"/>
+            <Button 
+              title="Excluir filme" 
+              className="secondary"
+            />
+            
+            <Button 
+              title="Salvar alterações"
+            />
           </div>
         </Form>
       </main>

@@ -9,12 +9,13 @@ export const Form = styled.form`
   max-width: 113.7rem;
   margin: 4rem auto;
 
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
   > header {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
-
-    margin-bottom: 4rem;
 
     > h1 {
       font-weight: 500;
@@ -26,5 +27,9 @@ export const Form = styled.form`
   > div {
     display: flex;
     gap: 4rem;
+    
+    div {
+      margin: 0;
+    }
   }
 `;
