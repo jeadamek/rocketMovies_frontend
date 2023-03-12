@@ -56,13 +56,15 @@ export const Section = styled.div`
     color: ${({ theme }) => theme.COLORS.TEXT_GRAY};
   }
 
-  > div {
+  .tags {
+    display: flex;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
     width: 100%;
     background-color: ${({ theme }) => theme.COLORS.BLACK};
     
     padding: 1.6rem;
-
-    display: flex;
-    gap: 2.4rem;
+    border-radius: .8rem;
   }
 `;

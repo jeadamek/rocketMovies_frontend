@@ -35,7 +35,7 @@ export function New() {
           <Section>
             <h2>Marcadores</h2>
             <div className="tags">
-              <MovieItem value="react"/>
+              <MovieItem value="ação"/>
               <MovieItem isNew placeholder="Novo Marcador"/>
             </div>
           </Section>
