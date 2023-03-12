@@ -5,20 +5,18 @@ export const Container = styled.div`
   height: fit-content;
   display: flex;
   align-items: center;
-
-  align-self: center;
+  gap: 1.2rem;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
   color: ${({ theme }) => theme.COLORS.GRAY_300};
 
   margin-bottom: .8rem;
+  padding: 0 2.4rem;
   border-radius: 1rem;  
 
   > input {
     height: 5.6rem;
     width: 100%;
-
-    padding: 0 2.4rem;
 
     color: ${({ theme }) => theme.COLORS.WHITE};
     background: transparent;
@@ -27,9 +25,9 @@ export const Container = styled.div`
     &:placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
-
-    > svg {
-      margin-left: 16px;
-    }
   }
+
+  > svg {
+      color: ${({ theme }) => theme.COLORS.GRAY_300};
+    }
 `;
