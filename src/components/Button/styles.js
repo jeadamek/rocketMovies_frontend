@@ -4,9 +4,6 @@ export const Container = styled.button`
   width: 100%;
   height: 5.6rem;
 
-  background-color: ${({ theme }) => theme.COLORS.PINK};
-  color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-
   border: 0;
   padding: 1.6rem 3.2rem;
   margin-top: 2.4rem;
@@ -20,5 +17,15 @@ export const Container = styled.button`
 
   &:disabled {
     opacity: 0.5;
+  }
+
+  .primary {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  }
+    
+  .secondary {
+    background-color: ${({ theme }) => theme.COLORS.BLACK};
+    color: ${({ theme }) => theme.COLORS.PINK};
   }
 `;

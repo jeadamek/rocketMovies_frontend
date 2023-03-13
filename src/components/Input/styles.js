@@ -8,7 +8,6 @@ export const Container = styled.div`
   gap: 1.2rem;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-  color: ${({ theme }) => theme.COLORS.GRAY_300};
 
   margin-bottom: .8rem;
   padding: 0 2.4rem;

@@ -1,7 +1,7 @@
 import { Container, Title, Description } from './styles';
 
-import { Tag } from '../../components/Tag';
 import { Ratings } from '../Ratings';
+import { Tag } from '../Tag';
 
 export function Movie({ data, ...rest }){
   return(
