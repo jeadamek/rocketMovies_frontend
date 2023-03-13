@@ -5,7 +5,6 @@ export const Container = styled.div`
   height: 100vh;
   overflow: hidden;
 
-
   display: grid;
   grid-template-rows: 116px auto;
   grid-template-areas:

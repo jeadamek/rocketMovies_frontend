@@ -19,7 +19,7 @@ export const Container = styled.div`
 
     overflow: hidden;
   }
-`
+`;
 
 export const Menu = styled.div`
   width: 100%;
@@ -58,7 +58,7 @@ export const Menu = styled.div`
       width: 2rem;
     }
   }
-`
+`;
 
 export const Content = styled.div`
   width: 100%;
@@ -71,4 +71,4 @@ export const Content = styled.div`
   gap: 2.4rem;
 
   overflow-y: auto;
-`
+`;

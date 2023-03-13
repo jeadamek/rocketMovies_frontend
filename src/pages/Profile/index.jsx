@@ -4,7 +4,6 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { NavLink } from "../../components/NavLink";
 
-import { Link } from 'react-router-dom';
 import { FiArrowLeft, FiLock, FiMail, FiUser, FiCamera } from "react-icons/fi";
 
 
@@ -12,7 +11,6 @@ export function Profile(){
   return(
     <Container>
       <header>
-        {/* <ButtonText title="Voltar" icon={FiArrowLeft} to="/" /> */}
         <NavLink title="Voltar" icon={FiArrowLeft} to="/" />
       </header>
 

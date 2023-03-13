@@ -15,14 +15,14 @@ export function MoviePreview() {
       <Header />
 
       <main>
-          <div className="buttons">
-            <NavLink 
-              title='voltar' 
-              icon={FiArrowLeft} 
-              to="/"
-            />
-            <ButtonText title='Apagar Filme' />
-          </div>
+        <div className="buttons">
+          <NavLink 
+            title='voltar' 
+            icon={FiArrowLeft} 
+            to="/"
+          />
+          <ButtonText title='Apagar Filme' />
+        </div>
           
         <Content>
           <MovieInfo>
