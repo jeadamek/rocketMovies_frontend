@@ -5,7 +5,7 @@ import { Button } from '../../components/Button';
 
 import { FiMail, FiLock, FiUser, FiArrowLeft } from 'react-icons/fi';
 
-export function SignOut() {
+export function SignUp() {
   return(
     <Container>
       <Form>
