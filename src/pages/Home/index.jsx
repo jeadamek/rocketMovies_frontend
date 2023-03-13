@@ -1,12 +1,12 @@
 import { Container, Menu, Content } from './styles';
 
 import { Header } from '../../components/Header';
-import { Button } from '../../components/Button';
 import { Movie } from '../../components/Movie';
 
+import { Link } from 'react-router-dom';
 import { FiPlus } from 'react-icons/fi';
 
-export function Home(){
+export function Home() {
   return(
     <Container>
       <Header/>
@@ -14,11 +14,15 @@ export function Home(){
       <main>
         <Menu>
           <h1>Meus filmes</h1>
-          <Button title="Adicionar filme" icon={FiPlus}/>
+
+          <Link to="/new"> 
+            <FiPlus />
+            Adicionar filme
+          </Link>
         </Menu>
 
         <Content>
-          <Movie data={{
+          <Movie to="/movie/22" data={{
             title: "Interestelar",
             tags: [
               {id: '1', name: 'Ficção Científica'},
