@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   background-color: ${({ theme }) => theme.COLORS.RED};
   border-radius: 1.6rem;
 
@@ -27,6 +28,8 @@ export const Title = styled.div`
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.2rem;
+
+    color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
   .cardRating {

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
@@ -7,14 +7,14 @@ export const Container = styled.div`
 
   display: grid;
   grid-template-rows: 11.5rem auto;
-  grid-template-areas: 
-    "header"
-    "content";
+  grid-template-areas:
+    'header'
+    'content';
 
   > main {
     grid-area: content;
-    padding: 5rem 2rem 6rem; 
-    width: 117rem; 
+    padding: 5rem 2rem 6rem;
+    width: 117rem;
     margin: 0 auto;
 
     overflow: hidden;
@@ -34,9 +34,29 @@ export const Menu = styled.div`
     line-height: 4.2rem;
   }
 
-  > button {
+  a {
     margin: 0;
     width: 21rem;
+
+    width: fit-content;
+    height: 5.6rem;
+
+    padding: 1.6rem 3.2rem;
+    border-radius: 1rem;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+    > svg {
+      height: 2rem;
+      width: 2rem;
+    }
   }
 `;
 
@@ -51,5 +71,4 @@ export const Content = styled.div`
   gap: 2.4rem;
 
   overflow-y: auto;
-  
 `;

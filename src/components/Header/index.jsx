@@ -8,11 +8,13 @@ export function Header() {
         <Brand>
           <h1>RocketMovies</h1>
         </Brand>
+
         <Input placeholder="Pesquisar pelo título"/>
-        <Profile>
+
+        <Profile to="/profile">
           <div>
             <strong>Jessica Adamek</strong>
-            <Logout>
+            <Logout to="#">
               sair
             </Logout>
           </div>

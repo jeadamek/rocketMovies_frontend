@@ -3,9 +3,9 @@ import { Container, Form, Section } from './styles';
 import { Input } from '../../components/Input';
 import { Header } from '../../components/Header';
 import { Button } from '../../components/Button';
+import { NavLink } from '../../components/NavLink';
 import { Textarea } from '../../components/Textarea';
 import { MovieItem } from '../../components/MovieItem';
-import { ButtonText } from '../../components/ButtonText';
 
 import { FiArrowLeft } from "react-icons/fi";
 
@@ -17,9 +17,10 @@ export function New() {
       <main>
         <Form>
           <header>
-            <ButtonText 
+            <NavLink 
               title="Voltar"
               icon={FiArrowLeft}
+              to="/"
             />
             <h1>Novo filme</h1>
           </header>

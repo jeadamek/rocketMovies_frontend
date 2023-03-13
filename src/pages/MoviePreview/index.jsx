@@ -2,6 +2,7 @@ import { Container, Content, MovieInfo, TitleRating, AuthorInfo, Description } f
 
 import { Tag } from "../../components/Tag";
 import { Header } from "../../components/Header";
+import { NavLink } from "../../components/NavLink";
 import { Ratings } from "../../components/Ratings";
 import { ButtonText } from "../../components/ButtonText";
 
@@ -14,10 +15,14 @@ export function MoviePreview() {
       <Header />
 
       <main>
-          <div className="buttons">
-            <ButtonText title='voltar' icon={FiArrowLeft}/>
-            <ButtonText title='Apagar Filme' />
-          </div>
+        <div className="buttons">
+          <NavLink 
+            title='voltar' 
+            icon={FiArrowLeft} 
+            to="/"
+          />
+          <ButtonText title='Apagar Filme' />
+        </div>
           
         <Content>
           <MovieInfo>

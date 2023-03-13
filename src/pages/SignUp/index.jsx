@@ -3,9 +3,10 @@ import { Container, Form, Background } from './styles';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 
+import { Link } from 'react-router-dom';
 import { FiMail, FiLock, FiUser, FiArrowLeft } from 'react-icons/fi';
 
-export function SignOut() {
+export function SignUp() {
   return(
     <Container>
       <Form>
@@ -34,10 +35,10 @@ export function SignOut() {
 
         <Button title="Cadastrar" type="submit" />
 
-        <a href="#">
+        <Link to="/">
           <FiArrowLeft />
           Voltar para o login
-        </a>
+        </Link>
       </Form>
 
       <Background />
