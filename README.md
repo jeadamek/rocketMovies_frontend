@@ -16,8 +16,6 @@
 
 # RocketMovies - Front-end
 
-## ✏️ About
-
 This project was developed on Stage 8 in the Explorer course at the [Rocketseat School](https://www.rocketseat.com.br/). To access the entire course assignments click [this link](https://github.com/jeadamek/explorer-rocketseat). 
 
 
