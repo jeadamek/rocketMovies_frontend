@@ -12,6 +12,9 @@
 
  <!-- <a href="https://jeadamek.github.io/rocketMovies_backend/"> ▶️ Access Project </a> -->
 </div>  
+</br>
+
+# RocketMovies - Front-end
 
 ## ✏️ About
 
@@ -80,6 +83,9 @@ To use this application, follow these steps:
 4. Your rating will be saved and displayed on the movie details page.
 5. Use the search bar or tags to find a movie you want to open the rating.
 6. Click on the movie to open its details page.
+
+## 🎨 Layout
+🔗 [View on Figma](https://www.figma.com/file/rvAIKANIXWXXAFPSFa3HfY/RocketMovies-(Copy)?node-id=0%3A1&t=Hfm4CUh0cwxvDNfY-1)
 
 ## 📝 License
 
