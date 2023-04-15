@@ -11,13 +11,40 @@ import { FiArrowLeft, FiLock, FiMail, FiUser, FiCamera } from "react-icons/fi";
 
 
 export function Profile(){
-  const { user } = useAuth();
+  const { user, updateProfile } = useAuth();
   
   const [name, setName] = useState(user.name); 
   const [email, setEmail] = useState(user.email); 
 
   const [passowordOld, setPasswordOld] = useState("");
   const [passowordNew, setPasswordNew] = useState("");
+
+  const [avatar, setAvatar] = useState(user.avatar);
+  const [avatarFile, setAvatarFile] = useState(null);
+
+  async function handleUpdate() {
+    const updated = {
+      name,
+      email,
+      password: passowordNew,
+      old_password: passowordOld
+    }
+
+    const userUpdated = Object.assign(user, updated);
+
+    await updateProfile({ user: userUpdated, avatarFile });
+  }
+
+  function handleChangeAvatar(event) {
+    // get event's file, the file user chose
+    const file = event.target.files[0];
+
+    setAvatarFile(file);
+
+    // create file's url
+    const imagePreview = URL.createObjectURL(file);
+    setAvatar(imagePreview);
+  }
 
   return(
     <Container>
@@ -27,14 +54,17 @@ export function Profile(){
 
       <Form>
         <Avatar>
-          <img src="https://www.github.com/jeadamek.png" alt="Foto do usuário" />
-          
+          <img 
+            src={avatar} 
+            alt={`Foto de ${user.name}`} 
+          />
           <label htmlFor="avatar">
             <FiCamera />
 
             <input
               id="avatar"
               type="file"
+              onChange={handleChangeAvatar}
             />
           </label>
         </Avatar>
@@ -71,7 +101,7 @@ export function Profile(){
 
         <Button 
           title="Salvar"
-          type="submit"
+          onClick={handleUpdate}
         />
       </Form>
 
