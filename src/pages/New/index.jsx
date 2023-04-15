@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { api } from '../../services/api';
+
 import { Container, Form, Section } from './styles';
 
 import { Input } from '../../components/Input';
@@ -38,6 +40,41 @@ export function New() {
     }
   }
 
+  async function handleNewRating() {
+    const validRating = rating >= 0 && rating <= 5
+
+    if (!title) {
+      return alert("Digite o título do filme");
+    }
+
+    if (!rating) {
+      return alert("Digite a nota do filme");
+    }  
+    
+    if (!validRating) {
+      return alert("A nota deve ser de 0 até 5");
+    }
+
+    if(newTag) {
+      return alert("Você deixou uma tag no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe o campo vázio.");
+    }
+
+
+    await api.post("/ratings", {
+      title,
+      rating,
+      description,
+      tags
+    });
+
+    alert("Nota criada com sucesso!");
+    navigate(-1);
+  }
+
+  function returnNavigation() {
+    navigate(-1);
+  } 
+
   return(
     <Container>
       <Header />
@@ -48,18 +85,28 @@ export function New() {
             <NavLink 
               title="Voltar"
               icon={FiArrowLeft}
-              to="/"
+              onClick={returnNavigation}
             />
             <h1>Novo filme</h1>
           </header>
 
 
             <div>
-              <Input placeholder="Título" />
-              <Input placeholder="Sua nota (de 0 a 5)" />
+              <Input 
+                placeholder="Título"
+                onChange={e => setTitle(e.target.value)}
+              />
+              <Input 
+                placeholder="Sua nota (de 0 a 5)"
+                type="number" 
+                onChange={e => setRating(e.target.value)}
+              />
             </div>
 
-          <Textarea placeholder="Observações" />
+          <Textarea 
+            placeholder="Observações" 
+            onChange={e => setDescription(e.target.value)}
+          />
 
           <Section>
             <h2>Marcadores</h2>
@@ -93,6 +140,7 @@ export function New() {
             
             <Button 
               title="Salvar alterações"
+              onClick={handleNewRating}
             />
           </div>
         </Form>
