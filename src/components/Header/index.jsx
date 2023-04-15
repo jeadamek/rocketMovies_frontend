@@ -1,11 +1,15 @@
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/auth';
+import { api } from '../../services/api';
 
-import { Container, Profile, Brand, Logout } from './styles';
 import { Input } from '../../components/Input';
+import { Container, Profile, Brand, Logout } from './styles';
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 
 export function Header() {
-  const { signOut } = useAuth();
+  const { signOut, user } = useAuth();
+
+  const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
 
   return(
     <Container>
@@ -18,7 +22,7 @@ export function Header() {
 
         <Profile to="/profile">
           <div>
-            <strong>Jessica Adamek</strong>
+            <strong>{user.name}</strong>
             <Logout 
               onClick={signOut}
               to="/"
@@ -27,8 +31,8 @@ export function Header() {
             </Logout>
           </div>
           <img
-            src="https://github.com/jeadamek.png"
-            alt="Foto do Usuário"
+            src={avatarURL}
+            alt={`Foto de ${user.name}`}
           />
         </Profile>
       </div>
