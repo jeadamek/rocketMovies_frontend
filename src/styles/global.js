@@ -26,6 +26,16 @@ export default createGlobalStyle`
     outline: none;
   }
 
+  input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+  }
+
+  input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
   a {
     text-decoration: none;
   }
