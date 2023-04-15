@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Container, Form, Avatar } from "./styles";
 
 import { useAuth } from "../../hooks/auth";
@@ -27,6 +28,8 @@ export function Profile(){
   const [avatar, setAvatar] = useState(avatarUrl);
   const [avatarFile, setAvatarFile] = useState(null);
 
+  const navigate = useNavigate();
+
   async function handleUpdate() {
     const updated = {
       name,
@@ -51,10 +54,14 @@ export function Profile(){
     setAvatar(imagePreview);
   }
 
+  function returnNavigation() {
+    navigate(-1);
+  } 
+
   return(
     <Container>
       <header>
-        <NavLink title="Voltar" icon={FiArrowLeft} to="/" />
+        <NavLink title="Voltar" icon={FiArrowLeft} onClick={returnNavigation} />
       </header>
 
       <Form>
