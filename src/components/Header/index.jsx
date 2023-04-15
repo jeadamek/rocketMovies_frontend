@@ -20,7 +20,7 @@ export function Header() {
   return(
     <Container>
       <div>
-        <Brand>
+        <Brand to="/">
           <h1>RocketMovies</h1>
         </Brand>
 

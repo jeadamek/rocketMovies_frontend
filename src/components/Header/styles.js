@@ -23,7 +23,7 @@ export const Container = styled.header`
   }
 `;
 
-export const Brand = styled.div`
+export const Brand = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
