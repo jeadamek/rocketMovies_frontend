@@ -23,7 +23,7 @@ export const Container = styled.header`
   }
 `;
 
-export const Brand = styled.div`
+export const Brand = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,12 +34,12 @@ export const Brand = styled.div`
   } 
 `;  
 
-export const Profile = styled(Link)`
+export const Profile = styled.div`
   display: flex;
   align-items: center;
   min-width: fit-content;
 
-  > img {
+  a > img {
     height: 7rem;
     width: 7rem;
     border-radius: 50%;
@@ -60,7 +60,7 @@ export const Profile = styled(Link)`
   }
 `;
 
-export const Logout = styled(Link)`
+export const Logout = styled.button`
   border: none;
   background: none;
   text-align: right;
