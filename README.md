@@ -14,9 +14,9 @@
 </div>  
 </br>
 
-# RocketMovies - Front-end
+# RocketMovies App
 
-This project was developed on Stage 8 in the Explorer course at the [Rocketseat School](https://www.rocketseat.com.br/). To access the entire course assignments click [this link](https://github.com/jeadamek/explorer-rocketseat). 
+This project was developed on Stage 9 in the Explorer course at the [Rocketseat School](https://www.rocketseat.com.br/). To access the entire course assignments click [this link](https://github.com/jeadamek/explorer-rocketseat). 
 
 
 The task of this project involved creating the user interface of an application using the ReactJs library. The front-end development is a component of a larger application, with the API having been developed in Stage 8. You can access the repository by clicking [here](https://github.com/jeadamek/rocketMovies_backend). The ultimate aim of this application is to provide a storage solution for users' movie ratings. The final stage of the course complete this project.
