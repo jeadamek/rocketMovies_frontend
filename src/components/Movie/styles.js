@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
-export const Container = styled(Link)`
+export const Container = styled.button`
   background-color: ${({ theme }) => theme.COLORS.RED};
+
+  border: none;
   border-radius: 1.6rem;
 
   padding: 3.2rem;
@@ -26,6 +27,7 @@ export const Title = styled.div`
 
   > h1 {
     font-weight: 700;
+    text-align: left;
     font-size: 2.4rem;
     line-height: 3.2rem;
 
@@ -46,6 +48,7 @@ export const Title = styled.div`
 export const Description = styled.p`
   color: ${({ theme }) => theme.COLORS.TEXT_GRAY};
   font-family: 'Roboto', sans-serif;
+  text-align: left;
 
   overflow: hidden; 
   text-overflow: ellipsis; 
