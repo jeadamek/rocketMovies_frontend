@@ -42,7 +42,9 @@ I could practice and study:
 
 The project's preview can be seen below:<br/>
 
-![preview]()
+![rocketmovies preview](https://user-images.githubusercontent.com/78454317/232338094-e06465cc-68d1-4df1-9ac9-d8d9fbdbb6d2.gif)
+
+![rocketmovies preview](https://user-images.githubusercontent.com/78454317/232338362-69ee6793-3ded-4a61-92de-0928b8428bd6.gif)
 
 
 ## 🛠️ Technologies
@@ -58,7 +60,7 @@ The project's preview can be seen below:<br/>
 </div>
 </br>
 
----
+
 ## ✨ Features
 
 The application enables users to create their login credentials and store their ratings. They can also retrieve, update, and delete their saved ratings as needed.
