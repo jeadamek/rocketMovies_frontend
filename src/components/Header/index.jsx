@@ -3,10 +3,10 @@ import { useAuth } from '../../hooks/auth';
 import { api } from '../../services/api';
 
 import { Input } from '../../components/Input';
-import { Container, Profile, Brand, Logout } from './styles';
+import { Container, Profile, Brand, Logout } from './styles'; 
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 
-export function Header() {
+export function Header({searchMovie}) {
   const { signOut, user } = useAuth();
   const navigate = useNavigate();
 
@@ -24,7 +24,10 @@ export function Header() {
           <h1>RocketMovies</h1>
         </Brand>
 
-        <Input placeholder="Pesquisar pelo título"/>
+        <Input 
+          placeholder="Pesquisar pelo título"
+          onChange={searchMovie}
+        />
 
         <Profile>
           <div>
