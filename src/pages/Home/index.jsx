@@ -6,22 +6,27 @@ import { api } from '../../services/api';
 import { Header } from '../../components/Header';
 import { Movie } from '../../components/Movie';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FiPlus } from 'react-icons/fi';
 
 export function Home() {
   const [search, setSearch] = useState('');
   const [movies, setMovies] = useState([]);
 
+  const navigate = useNavigate();
+
+  function handleDetails(id){
+    navigate(`/movie/${id}`);
+  }
+
   useEffect(() => {
     async function fetchMovies() {
-      const response = await api.get(`/ratings?title=${search}&tags`);
+      const response = await api.get(`/ratings?title=${search}`);
       setMovies(response.data)
     }
 
     fetchMovies();
   }, [search]);
-
 
   return(
     <Container>
@@ -44,6 +49,7 @@ export function Home() {
               <Movie
                 key={String(movie.id)}
                 data={movie}
+                onClick={() => handleDetails(movie.id)}
               />
             ))
           }
