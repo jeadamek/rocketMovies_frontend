@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container, Content, MovieInfo, TitleRating, AuthorInfo, Description } from "./styles";
 
 import { Tag } from "../../components/Tag";
