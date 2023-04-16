@@ -15,7 +15,7 @@ export const Container = styled.div`
     grid-area: content;
     padding: 3rem 0 6rem;
 
-    max-width: 113rem;
+    width: 113rem;
     margin: 0 auto;
 
     .buttons {
