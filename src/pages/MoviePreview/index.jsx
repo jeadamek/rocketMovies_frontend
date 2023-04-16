@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Container, Content, MovieInfo, TitleRating, AuthorInfo, Description } from "./styles";
 
 import { api } from "../../services/api";
+import { useAuth } from '../../hooks/auth';
 
 import { Tag } from "../../components/Tag";
 import { Header } from "../../components/Header";
@@ -14,10 +15,27 @@ import { BiTime } from 'react-icons/bi';
 import { FiArrowLeft } from 'react-icons/fi';
 
 export function MoviePreview() {
+  const { user } = useAuth();
+
   const [data, setData] = useState(null);
 
   const params = useParams();
   const navigate = useNavigate();
+
+  const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+
+  function handleBack(){
+    navigate(-1);
+  }
+
+  function handleRemove() {
+    const confirm = window.confirm("Deseja realmente remover o filme?");
+
+    if (confirm) {
+      api.delete(`/ratings/${params.id}`);
+      navigate(-1);
+    }
+  }
 
   useEffect(() => {
     async function fetchMovie(){
@@ -40,9 +58,12 @@ export function MoviePreview() {
             <NavLink 
               title='voltar' 
               icon={FiArrowLeft} 
-              to="/"
+              onClick={handleBack}
             />
-            <ButtonText title='Apagar Filme' />
+            <ButtonText 
+              title='Apagar Filme'
+              onClick={handleRemove}
+            />
           </div>
             
           <Content>
@@ -57,10 +78,12 @@ export function MoviePreview() {
               <AuthorInfo>
                 <div>
                   <img 
-                    src="https://github.com/jeadamek.png" 
-                    alt="Foto do Usuário"
+                    src={avatarURL} 
+                    alt={`Foto de ${user.name}`}
                   />
-                  <span>Jessica Adamek</span>
+                  <span>
+                    {user.name}
+                  </span>
                 </div>
 
                 <div>
