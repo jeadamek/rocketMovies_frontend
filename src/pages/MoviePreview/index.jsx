@@ -41,7 +41,6 @@ export function MoviePreview() {
     async function fetchMovie(){
       const response = await api.get(`/ratings/${params.id}`);
       setData(response.data);
-      console.log(data);
     }
 
     fetchMovie();
