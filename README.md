@@ -10,7 +10,7 @@
   
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jeadamek/rocketMovies_backend?color=%231280BF">
 
- <!-- <a href="https://jeadamek.github.io/rocketMovies_backend/"> ▶️ Access Project </a> -->
+ <a href="https://rocket-movies-deploy.netlify.app/"> ▶️ Access Deploy </a>
 </div>  
 </br>
 
@@ -75,6 +75,8 @@ To install this project, follow these steps:
 <br />
 
 ## 💻 Usage
+Access the application by clicking on this link [RocketMovies](https://rocket-movies-deploy.netlify.app/)
+
 To use this application, follow these steps:
 
 1. Open the application in your web browser.
